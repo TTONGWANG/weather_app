@@ -1,0 +1,42 @@
+.Card_Down_Right{
+    background-color:#f8f9fa;
+    width: 650px;
+    height:350px;
+    /* border: 1px solid black; */
+    margin-left: 450px;
+    /*margin-top: 400px;*/
+    border-bottom-right-radius:15px;
+  }
+  
+  .Card_Down_Right > ul{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    margin-inline-start: 0px;
+    padding-inline-start: 0px;
+  }
+  
+  .Card_Down_Right  li{
+     list-style: none;
+     /* margin: 20px; */
+     margin: 2rem;
+     text-align: center;
+     margin-inline-start: 10px;
+     padding-inline-start: 10px;
+  }
+  
+  .Card_Down_Right h1{
+    color:#979797;
+    margin-bottom: 20px;
+  }
+  
+  .Card_Down_Right p{
+    margin-bottom: 30px;
+    color:#979797;
+  }
+  
+  .Card_Down_Right h2{
+    margin-bottom: 30px;
+    size:20px;
+    color:#fadf47;
+  }

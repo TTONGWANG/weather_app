@@ -5,16 +5,16 @@ import './App.css';
 // import CardDownright from './components/Card_Down_Right/Card_Down_Right'
 
 // import ReactDOM from 'react-dom'
-import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
-import  {faBars} from '@fortawesome/free-solid-svg-icons';
+// import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
+// import  {faBars} from '@fortawesome/free-solid-svg-icons';
 import Card from './components/Card';
+import Header from './components/Header/Header'
 
 function App() {
   return (
     <div className="container">
-      <header><FontAwesomeIcon icon={faBars}/></header>
-      <div><Card/></div>
-    
+      <Header/>
+      <Card/>
     </div>
   );
 }

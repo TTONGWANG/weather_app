@@ -20,4 +20,4 @@ const CardUpLeft = (props)=> {
     )
 };
 
-    export default CardUpLeft;
+export default CardUpLeft;

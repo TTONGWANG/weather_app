@@ -38,13 +38,6 @@
     font-size: 30px;
   }
 
-  .arrows{
-    position:absolute;
-    margin-left: 260px;
-    margin-top: 243px;
-    font-size: 40px;
-    color: #d0a09f;
-  }
   
   .Card_Down_Left:after{
     content: '';

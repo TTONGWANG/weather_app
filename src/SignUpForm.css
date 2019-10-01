@@ -1,0 +1,24 @@
+form{
+    width: 7rem; 
+    height:14rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    position: absolute;
+}
+
+input{
+    outline-style: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 0px;
+    width:15rem;
+    font-size: 1.5rem;
+}
+
+.button{
+    position: absolute;
+    width:5rem;
+    height: 2rem;
+    margin-top:1rem;
+    border-radius: 3px;
+}

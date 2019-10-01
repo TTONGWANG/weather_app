@@ -1,9 +1,8 @@
 import React from "react";
 import './Card.css'
-import CardUp from './Card_Up/Card_Up'
-import CardDownleft from './Card_Down_Left/Card_Down_Left'
-import CardDownright from './Card_Down_Right/Card_Down_Right'
-
+import CardUp from './CardUp/CardUp'
+import CardDownleft from './CardDownleft/CardDownleft'
+import CardDownright from './CardDownright/CardDownright'
 const Card = (props)=> {
     return(
         <div className="Card">

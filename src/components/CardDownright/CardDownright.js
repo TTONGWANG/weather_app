@@ -1,5 +1,5 @@
 import React from "react";
-import './Card_Down_Right.css'
+import './CardDownright.css'
 import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 import  {faCloudRain,
          faSun,
@@ -9,7 +9,7 @@ import  {faCloudRain,
 
 const CardDownright = (props)=> {
     return(
-    <div className="Card_Down_Right">
+    <div className="carddownright">
           <ul>
             <li>
               <h1>MON</h1>

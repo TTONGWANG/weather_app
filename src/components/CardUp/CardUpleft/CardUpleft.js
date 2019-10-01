@@ -1,9 +1,9 @@
 import React from "react";
-import './Card_Up_Left.css'
+import './CardUpleft.css'
 
-const CardUpLeft = (props)=> {
+const CardUpleft = (props)=> {
     return(
-        <div className="Card_Up_Left">
+        <div className="cardupleft">
         <h1>12°</h1>
         <p>CLOUDY</p>
         <ul>
@@ -20,4 +20,4 @@ const CardUpLeft = (props)=> {
     )
 };
 
-export default CardUpLeft;
+export default CardUpleft;

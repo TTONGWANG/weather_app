@@ -5,7 +5,7 @@ import  {faCaretRight}  from '@fortawesome/free-solid-svg-icons';
 
 const Arrows = (props)=> {
     return(
-        <div className="Arrows"><FontAwesomeIcon icon={faCaretRight} /></div>
+        <div className="arrows"><FontAwesomeIcon icon={faCaretRight} /></div>
     )
 };
 

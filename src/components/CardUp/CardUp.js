@@ -1,11 +1,11 @@
 import React from "react";
-import './Card_Up.css'
-import CardUpLeft from './Card_Up_Left/Card_Up_Left'
+import './CardUp.css'
+import CardUpleft from './CardUpleft/CardUpleft'
 
 const CardUp = (props)=> {
     return(
-    <div className="Card_Up">
-      <CardUpLeft/>
+    <div className="cardup">
+      <CardUpleft/>
       <h2>FRANCE</h2>
     </div>
   )

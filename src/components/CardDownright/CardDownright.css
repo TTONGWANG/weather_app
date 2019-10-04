@@ -21,7 +21,7 @@
     /* margin: 20px; */
     margin: 2rem;
     text-align: center;
-    margin-inline-start: 10px;
+    margin-inline-start: 5px;
     padding-inline-start: 10px;
 }
   
@@ -39,4 +39,9 @@
   margin-bottom: 30px;
   size:20px;
   color:#fadf47;
+  
+}
+
+img{
+  background-color: #f8f9fa;
 }

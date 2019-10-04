@@ -10,19 +10,31 @@
   text-align: center;
   color:#f8f9fa;
 }
+
+.celsius {
+  /* background-color: #fff; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid  #fff;
+  position: absolute;
+  top: 2rem;
+  left: 29rem;
+}
   
 .cardupleft > p{
   font-size: 27px;
-  margin-left: 150px;
+  /* margin-left: 150px; */
   color: white;
-  /* text-align: center; */
+  text-align: center;
+  
 }
   
 ul{
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  margin: 70px; 
+   margin: 90px; 
 }
   
 .cardupleft li{
@@ -50,8 +62,9 @@ li > p{
   font-size: 30px;
   height:70px;
   width:110px;
+  text-align: center;
   color:whitesmoke;
-  /* border: 1px solid black; */
+/* border: 1px solid black; */
 }
   
 h2:before{
@@ -65,4 +78,5 @@ h2:before{
   width: 80%;
   background-color: #979797;
   border-radius: 15px;
+  /* border: 1px solid black; */
 }

@@ -1,14 +1,13 @@
 import React from "react";
 import './CardUp.css'
-import CardUpleft from './CardUpleft/CardUpleft'
 
-const CardUp = (props)=> {
+class CardUp extends React.Component{
+render(){
     return(
-    <div className="cardup">
-      <CardUpleft/>
-      <h2>FRANCE</h2>
-    </div>
-  )
-};
+        <div className="cardup">
+        <h2>{this.props.city}</h2>
+        </div>
+    )}
+}
 
 export default CardUp;

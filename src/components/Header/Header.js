@@ -3,19 +3,49 @@ import './Header.css'
 import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 import  {faBars} from '@fortawesome/free-solid-svg-icons';
 
-const Header = (props)=> {
-    return(
-          <div className = "btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                <FontAwesomeIcon icon={faBars}/></button>
-                <ul class="dropdown-menu" role = "menu">
-                    <li><a href="#">Paris</a></li>
-                    <li><a href="#">Sydney</a></li>
-                    <li><a href="#">China</a></li>
-                </ul>
-          </div>
-    )
+{/* <header><FontAwesomeIcon icon={faBars}/></header> */}
+
+class Header extends React.Component{
+    constructor(){
+        super(); 
+        this.state = {
+           i : ''
+        }
+        this.first = this.first.bind(this)
+        this.second = this.second.bind(this)
+        this.third = this.third.bind(this)
+    }
+    first(){
+        this.i = '1';
+        alert(`${this.i}`)
+    }
+    second(){
+        this.i = '2';
+        alert(`${this.i}`)
+    }
+    third(){
+        this.i = '3';
+        alert(`${this.i}`)
+    }
+
+    // componentDidMount() { 
         
-};
+    //     this.props.greeting(this.i)
+    //   }
+
+
+    render(){
+            // const {i} = this.state
+        return(
+            <div className = "buildbutton">
+                <button onClick = {this.first}>Paris</button>
+                <button onClick = {this.second}>Sydney</button>
+                <button onClick = {this.third}>Beijing</button>
+            </div>
+
+       
+        )
+    }
+}
 
 export default Header;

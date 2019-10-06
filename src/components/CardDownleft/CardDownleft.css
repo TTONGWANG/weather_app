@@ -32,8 +32,9 @@
 }
   
 .carddownleft > h3{
+  position:fixed;
   padding-left: 150px;
-  padding-top:30px;
+  padding-top:235px;
   letter-spacing:5px;
   font-size: 30px;
 }
@@ -51,3 +52,27 @@
   border-radius: 15px;
   
 }
+
+
+.arrows{
+  position: absolute;
+  font-size: 30px;
+  margin-left:21rem;
+  margin-top:250px;
+
+} 
+
+.arrows > button{
+  border:none;
+  background-color:#f8f9fa;
+  outline:none;   /* delete the blue outline*/
+}
+
+
+.arrows > button:active{
+  position: absolute;
+  font-size: 30px;
+  margin-left:21rem;
+  margin-top:250px;
+  opacity: 0.5;
+} 

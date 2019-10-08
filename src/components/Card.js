@@ -4,7 +4,6 @@ import CardUp from './CardUp/CardUp'
 import CardUpleft from './CardUp/CardUpleft/CardUpleft'
 import CardDownleft from './CardDownleft/CardDownleft'
 import CardDownright from './CardDownright/CardDownright'
-import Header from './Header/Header'
 import axios from 'axios'
 class Card  extends React.Component{
     constructor(){
@@ -37,21 +36,11 @@ class Card  extends React.Component{
             date4:'',
             date5:'',     
         }
-        // if(this.state.i === '1'){
-            // this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Paris&days=5"
-        // }
-        // else if (this.state.i === '2'){
-            // this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Sydney&days=5"
-        // }   
-        // else{
-        //  this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Beijing&days=5"
-        // }
     }
 
     componentDidMount(){
-        this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Paris&days=5"
         this.setState({
-          isLoading:true
+          isLoading:true,
         })
         axios.get(this.api)
         .then(res=>{console.log(res.data);
@@ -86,6 +75,7 @@ class Card  extends React.Component{
         })
     }
     render(){
+        
             const{isLoading, city, current_teperature, current_weather, current_humidity,current_wind,
                   weather_day1,temperature_day1,weather_icons_day1,date1,
                   weather_day2,temperature_day2,weather_icons_day2,date2,
@@ -94,7 +84,22 @@ class Card  extends React.Component{
                   weather_day5,temperature_day5,weather_icons_day5,date5,
                 } = this.state
             if(isLoading) return 'Loading...'
+
+            console.log("props",this.props)
+            // this.chooseApi()
+            
+            if (this.props.i === 1){
+                this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Paris&days=5"
+            }
+            else if (this.props.i === 2){
+                this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Sydney&days=5"
+            }
+            else{
+                this.api = "https://api.apixu.com/v1/forecast.json?forecast_days=3&key=1eb8b1de06614af3a3423418171609&q=Beijing&days=5"
+            }
+
             return(
+    
                 <div className="Card">
                     {/* <Header city = {city}/> */}
                     {/* <Header greeting={i => this.greeting(i)}/> */}

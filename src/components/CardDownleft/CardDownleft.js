@@ -21,7 +21,6 @@ class CardDownleft extends React.Component{
             <h1>Twitter Feed <small>#{this.props.city}</small></h1>
             <p>Don't forget your sunscreen tomorrow!<br/>
                <br/>
-        
                Amazing weather in Paris!</p>
             {/* <p>{this.greeting}</p> */}
             <h3>NEXT</h3>   

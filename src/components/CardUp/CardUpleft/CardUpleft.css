@@ -2,6 +2,7 @@
   position: absolute;
   height:350px;
   width:450px;
+  font-family: Roboto;
   /* border: 1px solid black; */
 }
   
@@ -30,25 +31,33 @@
   
 }
   
-ul{
+.cardupleft > ul{
   list-style-type: none;
   display: flex;
   flex-direction: row;
-   margin: 90px; 
+   margin-top: 10px; 
+   margin-left: 10px;
+   /* border: 1px solid black; */
+   width:500px;
 }
   
 .cardupleft li{
-  /* font-size:20px; */
-  /* width:20px; */
   text-align: center;
-  border-right: 1px solid #979797;;
+  border-right: 2px solid #cdc9e9;;
   color: white;
+  /* border: 1px solid black; */
+  /* padding-left:20px; */
+  margin-left:20px;
+  margin-right:40px;
+  padding-right:60px;
   /* margin-left 100px; */
 }
   
-li:last-child{
-  border-right: none;
-}
+ li:last-child{
+   border-right: none; 
+
+} 
+
 
 li > p{
   font-size: 20px;

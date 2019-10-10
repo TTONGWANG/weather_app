@@ -3,8 +3,7 @@ import './CardDownright.css'
 
 class CardDownright extends React.Component{
 
-    render(){
-    
+    render(){    
         return(
             <div className="carddownright">
                 <ul>

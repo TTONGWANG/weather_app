@@ -2,54 +2,54 @@ import React from "react";
 import './Header.css'
 // import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 // import  {faBars} from '@fortawesome/free-solid-svg-icons';
-import Card from './../Card'
+// <header><FontAwesomeIcon icon={faBars}/></header>
+import Card from './../Card' 
+import Dropdown from 'react-bootstrap/Dropdown'
 
-
-// <header><FontAwesomeIcon icon={faBars}/></header> 
 
 class Header extends React.Component{
     constructor(){
         super(); 
         this.state = {
-           i : 1
+           city:"Paris"
         }
-        this.first = this.first.bind(this)
-        this.second = this.second.bind(this)
-        this.third = this.third.bind(this)
+        this.firstbutton = this.firstbutton.bind(this)
+        this.secondbutton = this.secondbutton.bind(this)
+        this.thirdbutton = this.thirdbutton.bind(this)
     }
     
-    first(){
+    firstbutton(){
         this.setState({
-            i: 1
+            city: "Paris"
         })
-        // alert(`${this.i}`)
     }
-    second(){
+
+    secondbutton(){
         this.setState({
-            i: 2
+            city:"Sydney"
         })
-        // alert(`${this.i}`)
     }
-    third(){
+
+    thirdbutton(){
         this.setState({
-            i: 3
+            city:"Beijing"
         })
-        // alert(`${this.i}`)
     }
 
     render(){
-            const {i} = this.state
+            const {city} = this.state
         return(
             <div>
-            <div className = "buildbutton">
-                <button onClick = {this.first}>Paris</button>
-                <button onClick = {this.second}>Sydney</button>
-                <button onClick = {this.third}>Beijing</button>
+            <Dropdown>
+                <Dropdown.Toggle variant="info" id="dropdown-basic">City</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <Dropdown.Item button onClick = {this.firstbutton}>Paris</Dropdown.Item>
+                    <Dropdown.Item button onClick = {this.secondbutton}>Sydney</Dropdown.Item>
+                    <Dropdown.Item  button onClick = {this.thirdbutton}>Beijing</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+            <Card city = {city}/>
             </div>
-            <Card i = {i}/>
-            </div>
-
-       
         )
     }
 }

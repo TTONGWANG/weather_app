@@ -14,7 +14,6 @@ class CardDownleft extends React.Component{
        alert(`Don't forget your sunscreen tomorrow!`)
     }
 
-
     render(){
         return(
             <div className="carddownleft">

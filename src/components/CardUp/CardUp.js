@@ -5,23 +5,29 @@ import Sydney from './image/Sydney.jpeg'
 import Beijing from './image/Beijing.jpeg'
 
 class CardUp extends React.Component{
-    styles = {
-        background: `url(${Paris})`
+
+    constructor(){
+        super();
+        this.state = {
+            styles:{backgroundImage:''}
+        }
     }
 
-    // chooseCity() {
-    //     this.props.city == 'Paris' ? this.styles.background = `url(${Paris})` 
-    //     : this.props.city == 'Sydney' ? this.styles.background = `url(${Sydney})` 
-    //     : this.styles.background = `url(${Beijing})`;
-    // }
+    fetchBackground() {
+        const { city } = this.props;
+        city === 'Paris' ? this.styles = {backgroundImage:`url(${Paris}) `} 
+        : city === 'Sydney' ? this.styles = {backgroundImage:`url(${Sydney})`} 
+        : this.styles = {backgroundImage:`url(${Beijing})`};
+    }
 
-render(){
-    // this.chooseCity();
-    return(
-        <div style = {this.styles} className="cardup" >
-        <h2>{this.props.city}</h2>
-        </div>
-    )};
+    render(){
+        const {city} = this.props
+        this.fetchBackground()
+        return(
+            <div style = {this.styles} className="cardup" >
+            <h2>{city}</h2>
+            </div>
+        )};
 }
 
 export default CardUp;

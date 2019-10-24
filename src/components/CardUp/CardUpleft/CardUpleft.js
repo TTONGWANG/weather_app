@@ -15,7 +15,7 @@ class CardUpleft extends React.Component{
                         </li>
                         <li>
                         <p>wind</p>
-                        <p>{this.props.current_wind} k/m</p>
+                        <p>{this.props.current_wind} km/s</p>
                         </li>
                     </ul>
                 </div>

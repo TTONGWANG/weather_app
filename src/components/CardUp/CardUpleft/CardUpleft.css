@@ -5,7 +5,7 @@
   font-family: Roboto;
   /* border: 1px solid black; */
 }
-  
+
 .cardupleft > h1{
   font-size: 140px;
   text-align: center;
@@ -79,7 +79,7 @@ li > p{
 h2:before{
   content: '';
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: auto;
   bottom: 0;
   right: auto;

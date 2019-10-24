@@ -53,11 +53,10 @@
   
 }
 
-
 .arrows{
   position: absolute;
   font-size: 30px;
-  margin-left:21rem;
+  margin-left:25rem;
   margin-top:250px;
 
 } 
@@ -67,7 +66,6 @@
   background-color:#f8f9fa;
   outline:none;   /* delete the blue outline*/
 }
-
 
 .arrows > button:active{
   position: absolute;

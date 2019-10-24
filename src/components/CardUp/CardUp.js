@@ -3,31 +3,36 @@ import './CardUp.css'
 import Paris from './image/Paris.jpeg'
 import Sydney from './image/Sydney.jpeg'
 import Beijing from './image/Beijing.jpeg'
+import fault from './image/fault.svg'
 
-class CardUp extends React.Component{
+class CardUp extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            styles:{backgroundImage:''}
+            styles: { backgroundImage: '' }
         }
     }
 
     fetchBackground() {
-        const { city } = this.props;
-        city === 'Paris' ? this.styles = {backgroundImage:`url(${Paris}) `} 
-        : city === 'Sydney' ? this.styles = {backgroundImage:`url(${Sydney})`} 
-        : this.styles = {backgroundImage:`url(${Beijing})`};
+        // const { city } = this.props;
+        // city === 'Paris' ? this.styles = { backgroundImage: `url(${Paris}) ` }
+        // : city === 'Sydney' ? this.styles = { backgroundImage: `url(${Sydney})` }
+        // : city === 'Beijing' ? this.styles = {backgroundImage: `url(${Beijing})`}
+        this.styles = { backgroundImage: `url(${fault})` };  
     }
 
-    render(){
-        const {city} = this.props
+    render() {
+        // console.log(this.props.city)
+        // const { city } = this.props
         this.fetchBackground()
-        return(
-            <div style = {this.styles} className="cardup" >
-            <h2>{city}</h2>
+        return (
+            <div style={this.styles} className="cardup" >
+                <h2>{this.props.city}</h2>
+                
             </div>
-        )};
+        )
+    };
 }
 
 export default CardUp;

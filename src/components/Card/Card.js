@@ -1,22 +1,21 @@
 import React from "react";
-// import Card from './../Card'
-import './Header.css'
+import './Card.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import CardUp from './../CardUp/CardUp'
-import CardUpleft from './../CardUp/CardUpleft/CardUpleft'
-import CardDownleft from './../CardDownleft/CardDownleft'
-import CardDownright from './../CardDownright/CardDownright'
+import CardUp from '../CardUp/CardUp'
+import CardUpleft from '../CardUp/CardUpleft/CardUpleft'
+import CardDownleft from '../CardDownleft/CardDownleft'
+import CardDownright from '../CardDownright/CardDownright'
 
-class Header extends React.Component {
+class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             // city: 'Sydney',
             isLoading: false,
             city: '',
-            data:'',
+            data: 'Sydney',
             current_teperature: '',
             current_weather: '',
             current_humidity: '',
@@ -53,6 +52,9 @@ class Header extends React.Component {
         // this.setState({ city: this.state.value });
         this.fetchWeather(this.state.city);
         // console.log(this.state.city);
+        this.setState({
+            data : this.state.city
+        })
         event.preventDefault();
     }
 
@@ -71,9 +73,9 @@ class Header extends React.Component {
                 console.log(res.data);
                 this.setState({
                     isLoading: false,
-                    data: res.data,
+                    // data: res.data,
                     city: res.data.city.name,
-                    
+
                     current_teperature: Math.round(res.data.list[0].main.temp),
                     current_weather: res.data.list[0].weather[0].main,
                     current_humidity: res.data.list[0].main.humidity,
@@ -117,21 +119,20 @@ class Header extends React.Component {
             weather_day5, temperature_day5, weather_icons_day5, date5,
         } = this.state
         if (isLoading) return 'Loading...'
-        // this.fetchWeather(city);
         return (
             <div>
                 <form>
                     <label>
-                        <input type="text" value={city} onChange={this.handleChange} placeholder ="City name"/>
+                        <input type="text" value={city} onChange={this.handleChange} placeholder="City name" />
                     </label>
                     <button onClick={this.handleSubmit} ><FontAwesomeIcon icon={faSearch} /> </button>
                 </form>
-
+                
                 <div className="Card">
-                    <CardUp city={city} />
+                    <CardUp city={data} />
                     <CardUpleft current_teperature={current_teperature} current_humidity={current_humidity}
                         current_weather={current_weather} current_wind={current_wind} />
-                    <CardDownleft city={city} />
+                    <CardDownleft city={data} />
                     <CardDownright weather_day1={weather_day1} temperature_day1={temperature_day1} weather_icons_day1={weather_icons_day1} date1={date1}
                         weather_day2={weather_day2} temperature_day2={temperature_day2} weather_icons_day2={weather_icons_day2} date2={date2}
                         weather_day3={weather_day3} temperature_day3={temperature_day3} weather_icons_day3={weather_icons_day3} date3={date3}
@@ -143,5 +144,5 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default Card;
 

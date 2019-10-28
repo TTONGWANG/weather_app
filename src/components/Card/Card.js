@@ -15,7 +15,7 @@ class Card extends React.Component {
             // city: 'Sydney',
             isLoading: false,
             city: '',
-            data: 'Sydney',
+            city_change: 'Sydney',
             current_teperature: '',
             current_weather: '',
             current_humidity: '',
@@ -53,7 +53,7 @@ class Card extends React.Component {
         this.fetchWeather(this.state.city);
         // console.log(this.state.city);
         this.setState({
-            data : this.state.city
+            city_change: this.state.city
         })
         event.preventDefault();
     }
@@ -111,7 +111,7 @@ class Card extends React.Component {
     }
 
     render() {
-        const { isLoading, city, data, current_teperature, current_weather, current_humidity, current_wind,
+        const { isLoading, city, city_change, current_teperature, current_weather, current_humidity, current_wind,
             weather_day1, temperature_day1, weather_icons_day1, date1,
             weather_day2, temperature_day2, weather_icons_day2, date2,
             weather_day3, temperature_day3, weather_icons_day3, date3,
@@ -127,12 +127,12 @@ class Card extends React.Component {
                     </label>
                     <button onClick={this.handleSubmit} ><FontAwesomeIcon icon={faSearch} /> </button>
                 </form>
-                
+
                 <div className="Card">
-                    <CardUp city={data} />
+                    <CardUp city={city_change} />
                     <CardUpleft current_teperature={current_teperature} current_humidity={current_humidity}
                         current_weather={current_weather} current_wind={current_wind} />
-                    <CardDownleft city={data} />
+                    <CardDownleft city={city_change} />
                     <CardDownright weather_day1={weather_day1} temperature_day1={temperature_day1} weather_icons_day1={weather_icons_day1} date1={date1}
                         weather_day2={weather_day2} temperature_day2={temperature_day2} weather_icons_day2={weather_icons_day2} date2={date2}
                         weather_day3={weather_day3} temperature_day3={temperature_day3} weather_icons_day3={weather_icons_day3} date3={date3}

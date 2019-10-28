@@ -31,11 +31,11 @@ class NavBar extends React.Component {
             <div className="body">
                 <h1>{new Date().toString().substring(16, 0)}</h1>
                 <div className="sidemenu" style={{width:this.state.width ,marginLeft:this.state.marginLeft}}>
-                    <a className="close" onClick={this.closeSM}>&times;</a>
+                    <div className="close" onClick={this.closeSM}>&times;</div>
                     <div className="sm-wrapper">
-                        <a href="#">HOME</a>
-                        <a href="#">ABOUT</a>
-                        <a href="#">CONTACT</a>
+                        <a href="App.js" >HOME</a>
+                        <a href="#">Sign In</a>
+                        <a href="#">Login</a>
                     </div>
                 </div>
                 <div id="pg-content" style={{width:this.state.width ,marginLeft:this.state.marginLeft}} >

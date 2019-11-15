@@ -9,12 +9,12 @@ import fault from './image/fault.svg'
 
 class CardUp extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            styles: { backgroundImage: '' }
-        }
-    }
+    // constructor() {
+    //     super();
+    //     // this.state = {
+    //     //     styles: { backgroundImage: '' }
+    //     // }
+    // }
 
     fetchBackground() {
         const { city } = this.props;

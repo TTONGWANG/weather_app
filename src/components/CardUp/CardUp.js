@@ -8,14 +8,6 @@ import London from './image/London.jpeg'
 import fault from './image/fault.svg'
 
 class CardUp extends React.Component {
-
-    // constructor() {
-    //     super();
-    //     // this.state = {
-    //     //     styles: { backgroundImage: '' }
-    //     // }
-    // }
-
     fetchBackground() {
         const { city } = this.props;
         city === 'Paris' ? this.styles = { backgroundImage: `url(${Paris}) ` }

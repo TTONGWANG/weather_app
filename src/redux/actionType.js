@@ -1,0 +1,1 @@
+export const LODA_DATA = 'loadData'

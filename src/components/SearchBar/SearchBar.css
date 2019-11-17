@@ -1,0 +1,22 @@
+form{
+    padding:10px;
+    /* float: right; */
+    margin-left:16%;
+    /* display: flex; */
+}
+form button{
+    border:none;
+    background-color: #7bc572;
+    box-shadow: 1px 1px 5px #888888;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    outline:none;   
+    /* display: flex; */
+}
+
+form input{
+    border:none;
+    box-shadow: 1px 1px 5px #888888;
+    border-radius: 15px 0px 0px 15px;
+    padding-left:5px;
+}

@@ -1,0 +1,25 @@
+@import '../config.scss';
+
+form{
+    padding:10px;
+    margin-left:20%;
+    /* display: flex; */
+    
+    button{
+        border:none;
+        background-color:$button-background-color;
+        box-shadow: 1px 1px 5px $box-shadow;
+        color: $button-color;
+        border-radius: 0px 15px 15px 0px;
+        outline:none;   
+        /* display: flex; */
+    }
+
+    input{
+        border:none;
+        box-shadow: 1px 1px 5px $box-shadow;
+        border-radius: 15px 0px 0px 15px;
+        padding-left:5px;
+    }
+}
+

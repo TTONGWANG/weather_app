@@ -1,0 +1,14 @@
+$word-color:whitesmoke;
+$border-color:#979797;
+$celsius-color: #fff;
+$background:#f8f9fa;
+$nav-background-color:#f6bfa3;
+$button-background-color:#7bc572;
+$button-color:white;
+$box-shadow:#888888;
+
+@mixin flexCenter{
+    display: flex;
+    flex-wrap: wrap;
+}
+

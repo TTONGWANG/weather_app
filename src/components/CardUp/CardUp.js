@@ -1,5 +1,5 @@
 import React from "react";
-import './CardUp.css'
+import './CardUp.scss'
 import Paris from './image/Paris.jpeg'
 import Sydney from './image/Sydney.jpeg'
 import Beijing from './image/Beijing.jpeg'

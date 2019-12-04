@@ -1,91 +1,63 @@
-.cardupleft{
+.cardupleft {
   position: absolute;
-  height:350px;
-  width:450px;
+  height: 350px;
+  width: 450px;
   font-family: Roboto;
   /* border: 1px solid black; */
 }
 
-.cardupleft > h1{
+.cardupleft h1 {
   font-size: 140px;
   text-align: center;
-  color:#f8f9fa;
+  color: whitesmoke;
 }
 
-.celsius {
+.cardupleft__celsius {
   /* background-color: #fff; */
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 5px solid  #fff;
+  border: 5px solid #fff;
   position: absolute;
   top: 2rem;
   left: 29rem;
 }
-  
-.cardupleft > p{
+
+.cardupleft > p {
   font-size: 27px;
-  /* margin-left: 150px; */
-  color: white;
+  color: whitesmoke;
   text-align: center;
-  
 }
-  
-.cardupleft > ul{
+
+.cardupleft ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-   margin-top: 10px; 
-   margin-left: 10px;
-   /* border: 1px solid black; */
-   width:500px;
-}
-  
-.cardupleft li{
-  text-align: center;
-  border-right: 2px solid #cdc9e9;;
-  color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 10px;
   /* border: 1px solid black; */
-  /* padding-left:20px; */
-  margin-left:20px;
-  margin-right:40px;
-  padding-right:60px;
-  /* margin-left 100px; */
+  width: 500px;
 }
-  
- li:last-child{
-   border-right: none; 
 
-} 
+.cardupleft li {
+  text-align: center;
+  border-right: 2px solid #979797;
+  color: whitesmoke;
+  /* border: 1px solid black; */
+  margin-left: 20px;
+  margin-right: 40px;
+  padding-right: 60px;
+}
 
+.cardupleft li:last-child {
+  border-right: none;
+}
 
-li > p{
+.cardupleft__detial {
   font-size: 20px;
-   margin: 10px;
+  margin: 10px;
 }
-  
-.cardup > h2{
-  position: absolute;
-  margin-left: 800px;
-  padding-top: 30px;
-  font-size: 30px;
-  height:70px;
-  width:110px;
-  text-align: center;
-  color:whitesmoke;
-/* border: 1px solid black; */
-}
-  
-h2:before{
-  content: '';
-  position: absolute;
-  left: 10%;
-  top: auto;
-  bottom: 0;
-  right: auto;
-  height: 2px;
-  width: 80%;
-  background-color: #979797;
-  border-radius: 15px;
-  /* border: 1px solid black; */
-}
+/*# sourceMappingURL=CardUpleft.css.map */

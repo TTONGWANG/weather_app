@@ -1,88 +1,49 @@
-.body{
-    /* position: fixed; */
-    margin:0;
-    /* overflow:hidden; */
-    background-color:white;
-    /* overflow:visible; */
-    /* margin-bottom: 40px; */
+.nav {
+  margin: 0;
 }
 
-.sidemenu{
-    height: 100%;
-    width:0; 
-    position:fixed;
-    z-index:1;
-    /* top:0; */
-    /* left:0; */
-    background-color: #f6bfa3;
-    overflow:hidden;
-    /* transition:0.1s; */
-    padding-top: 130px;
+.nav__menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #f6bfa3;
+  overflow: hidden;
+  /* transition:0.1s; */
+  padding-top: 130px;
 }
 
-.sidemenu a{
-    padding: 8px 8px 8px 50px;
-    text-decoration: none;
-    font-size:25px;
-    color:#ffffff;
-    display:block;
-    letter-spacing:5px;
-    margin-bottom:20px;
-    /* transition: 0.3s; */
+.nav__menu a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+  display: block;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
 }
 
-.sidemenu .close{
-    position: absolute;
-    top: 0;
-    right:25px;
-    font-size:55px;
-    margin-left:50px;
+.nav__menu__close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 55px;
+  margin-left: 50px;
+  cursor: pointer;
 }
 
-/* .sm-wrapper a:after{
-    z-index:-1;
-    position: absolute;
-    left:0%;
-    width: 0;
-    height: 50px;
-    background:#e85e4f;
-    content:'';
-    transition: width 0.35s ease-in-out;
+.nav__content {
+  padding: 16px;
 }
 
-.sm-wrapper a:hover:after{
-    width:10%;
+.nav__content__barstyle {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
 }
 
-.sm-wrapper a:hover{
-    padding-left: 64px;
-    transition: 0.35s ease-in-out;
-}  */
-
-.barstyle{
-    font-size: 30px;
-    cursor: pointer;
-    color:#5b5b5b;
-    /* position: absolute; */
-
+#pg-content {
+  /* transition: margin-left 0.5s; */
+  padding: 16px;
 }
-
-#pg-content{
-    /* transition: margin-left 0.5s; */
-    padding: 16px;
-} 
-
-.body h1{
-    position: absolute;
-    left:700px;
-}
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=NavBar.css.map */

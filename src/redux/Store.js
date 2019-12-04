@@ -5,5 +5,4 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 // import location from './reducers'
 const store = createStore(Data, composeWithDevTools(applyMiddleware(thunk)));
-console.log(store)
-export default store
+export default store;

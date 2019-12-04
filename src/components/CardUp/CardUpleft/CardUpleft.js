@@ -1,21 +1,21 @@
 import React from "react";
-import './CardUpleft.css'
+import './CardUpleft.scss'
 
 class CardUpleft extends React.Component{
     render(){
         return(
                 <div className="cardupleft">
                     <h1>{this.props.current_teperature}</h1>
-                    <div className="celsius"></div>
+                    <div className="cardupleft__celsius"></div>
                     <p>{this.props.current_weather}</p>
                     <ul>
                         <li>
-                        <p>humidity</p>
-                        <p>{this.props.current_humidity}</p>
+                        <p className = "cardupleft__detial">humidity</p>
+                        <p className = "cardupleft__detial">{this.props.current_humidity}</p>
                         </li>
                         <li>
-                        <p>wind</p>
-                        <p>{this.props.current_wind} km/s</p>
+                        <p className = "cardupleft__detial">wind</p>
+                        <p className = "cardupleft__detial">{this.props.current_wind} km/s</p>
                         </li>
                     </ul>
                 </div>

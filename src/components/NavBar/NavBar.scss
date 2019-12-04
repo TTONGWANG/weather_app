@@ -1,0 +1,65 @@
+@import './../config.scss';
+.nav{ 
+    margin:0;
+    // background-color:white;
+    // h1{
+    //     position: absolute;
+    //     left:700px;
+    // }
+    &__menu{
+        height: 100%;
+        width:0; 
+        position:fixed;
+        z-index:1;
+        background-color: $nav-background-color;
+        overflow:hidden;
+        /* transition:0.1s; */
+        padding-top: 130px;
+        & a{
+            padding: 8px 8px 8px 50px;
+            text-decoration: none;
+            font-size:25px;
+            color:$word-color;
+            display:block;
+            letter-spacing:5px;
+            margin-bottom:20px;
+        }
+        &__close{
+            position: absolute;
+            top: 0;
+            right:25px;
+            font-size:55px;
+            margin-left:50px;
+            cursor: pointer;
+        }
+    }
+
+    &__content{
+        padding: 16px;
+
+        &__barstyle{
+            font-size: 30px;
+            cursor: pointer;
+            color:$celsius-color;
+        }
+    } 
+}
+
+
+
+#pg-content{
+    /* transition: margin-left 0.5s; */
+    padding: 16px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,85 +1,32 @@
 import React from "react";
-import './CardDownright.css'
+import './CardDownright.scss'
+import { Data } from "../../redux/Reducer";
 
 class CardDownright extends React.Component {
 
     render() {
+        const Li = ({weather, main ,date})=>(
+            <li>
+                {console.log(weather)}
+            <h1>{new Date(date).toString().substring(3, 0)}</h1>
+            <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="weather_img1"></img>
+            <p>{Math.round(main.temp)}°</p>
+            <p>{weather.main}</p>
+        </li>
+        )
+        // console.log(this.props)
         return (
             <div className="carddownright">
-                <ul>
-                    <li>
-                        <h1>{new Date(this.props.date1).toString().substring(3, 0)}</h1>
-                        <img src={`http://openweathermap.org/img/wn/${this.props.weather_icons_day1}@2x.png`} alt="weather_img1"></img>
-                        <p>{this.props.temperature_day1}°</p>
-                        <p>{this.props.weather_day1}</p>
-                    </li>
-                    <li>
-                        <h1>{new Date(this.props.date2).toString().substring(3, 0)}</h1>
-                        <img src={`http://openweathermap.org/img/wn/${this.props.weather_icons_day2}@2x.png`} alt="weather_img2"></img>
-                        <p>{this.props.temperature_day2}°</p>
-                        <p>{this.props.weather_day2}</p>
-                    </li>
-                    <li>
-                        <h1>{new Date(this.props.date3).toString().substring(3, 0)}</h1>
-                        <img src={`http://openweathermap.org/img/wn/${this.props.weather_icons_day3}@2x.png`} alt="weather_img3"></img>
-                        <p>{this.props.temperature_day3}°</p>
-                        <p>{this.props.weather_day3}</p>
-                    </li>
-                    <li>
-                        <h1>{new Date(this.props.date4).toString().substring(3, 0)}</h1>
-                        <img src={`http://openweathermap.org/img/wn/${this.props.weather_icons_day4}@2x.png`} alt="weather_img4"></img>
-                        <p>{this.props.temperature_day4}°</p>
-                        <p>{this.props.weather_day4}</p>
-                    </li>
-                    <li>
-                        <h1>{new Date(this.props.date5).toString().substring(3, 0)}</h1>
-                        <img src={`http://openweathermap.org/img/wn/${this.props.weather_icons_day5}@2x.png`} alt="weather_img5"></img>
-                        <p>{this.props.temperature_day5}°</p>
-                        <p>{this.props.weather_day5}</p>
-                    </li>
+                <ul>   
+                    {
+                        this.props.data.map(
+                            (list)=> <Li weather={list.weather[0]} main = {list.main} date = {list.dt_txt}/>
+                        )  
+                    } 
                 </ul>
             </div>
         )
     }
 }
-
-// const CardDownright = (props)=> {
-//     return(
-//     <div className="carddownright">
-//           <ul>
-//             <li>
-//               <h1>MON</h1>
-//               <h2><FontAwesomeIcon icon={faCloudRain}/></h2>
-//               <p>9°</p>
-//               <p>raining</p>
-//             </li>
-//             <li>
-//               <h1>TUE</h1>
-//               <h2><FontAwesomeIcon icon={faSun}/></h2>
-//               <p>15°</p>
-//               <p>sunning</p>
-//             </li>
-//             <li>
-//               <h1>WED</h1>
-//               <h2><FontAwesomeIcon icon={faCloud}/></h2>
-//               <p>7°</p>
-//               <p>Cloudy</p>
-//             </li>
-//             <li>
-//               <h1>THU</h1>
-//               <h2><FontAwesomeIcon icon={faPooStorm}/></h2>
-//               <p>7°</p>
-//               <p>Storm</p>
-//             </li>
-//             <li>
-//               <h1>FRI</h1>
-//               <h2><FontAwesomeIcon icon={faSun}/></h2>
-//               <p>18°</p>
-//               <p>Sunny</p>
-//             </li>            
-//           </ul>
-//         </div>
-//     )
-// };
 
 export default CardDownright;

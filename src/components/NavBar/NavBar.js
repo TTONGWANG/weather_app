@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css';
+import './NavBar.scss';
 
 class NavBar extends React.Component {
     constructor(props){
@@ -15,7 +15,6 @@ class NavBar extends React.Component {
     openSM(){
         this.setState({
             width : "300px",
-            // marginLeft: "450px"
         })
     }
 
@@ -28,18 +27,18 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div className="body">
-                <h1>{new Date().toString().substring(16, 0)}</h1>
-                <div className="sidemenu" style={{width:this.state.width ,marginLeft:this.state.marginLeft}}>
-                    <div className="close" onClick={this.closeSM}>&times;</div>
-                    <div className="sm-wrapper">
+            <div className="nav">
+                {/* <h1>{new Date().toString().substring(16, 0)}</h1> */}
+                <div className="nav__menu" style={{width:this.state.width ,marginLeft:this.state.marginLeft}}>
+                    <div className="nav__menu__close" onClick={this.closeSM}>&times;</div>
+                    <div className="nav__menu__wrapper">
                         <a href="App.js" >HOME</a>
-                        <a href="#">Sign In</a>
-                        <a href="#">Login</a>
+                        {/* <a href="#">Sign In</a> */}
+                        {/* <a href="#">Login</a> */}
                     </div>
                 </div>
-                <div id="pg-content" style={{width:this.state.width ,marginLeft:this.state.marginLeft}} >
-                    <div className="barstyle"  onClick={this.openSM}>&#9776;</div>        
+                <div className="nav__content" style={{width:this.state.width ,marginLeft:this.state.marginLeft}} >
+                    <div className="nav__content__barstyle"  onClick={this.openSM}>&#9776;</div>        
                 </div>
             </div>
         );

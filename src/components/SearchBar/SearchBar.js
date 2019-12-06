@@ -38,14 +38,12 @@ class SearchBar extends React.Component {
     render() {
         
         return (
-            <div>
                 <form>
                     <label>
                         <input type="text" value={this.state.city} onChange={this.handleChange} placeholder="City name" />
                     </label>
                     <button onClick={this.handleSubmit} ><FontAwesomeIcon icon={faSearch} /> </button>
                 </form>
-            </div>
         );
     }
 }

@@ -5,17 +5,17 @@ class CardUpleft extends React.Component{
     render(){
         return(
                 <div className="cardupleft">
-                    <h1>{this.props.current_teperature}</h1>
+                    <h1>{Math.round(this.props.data[0].main.temp)}</h1>
                     <div className="cardupleft__celsius"></div>
-                    <p>{this.props.current_weather}</p>
+                    <p>{this.props.data[0].weather[0].main}</p>
                     <ul>
                         <li>
                         <p className = "cardupleft__detial">humidity</p>
-                        <p className = "cardupleft__detial">{this.props.current_humidity}</p>
+                        <p className = "cardupleft__detial">{this.props.data[0].main.humidity}</p>
                         </li>
                         <li>
                         <p className = "cardupleft__detial">wind</p>
-                        <p className = "cardupleft__detial">{this.props.current_wind} km/s</p>
+                        <p className = "cardupleft__detial">{this.props.data[0].wind.speed} km/s</p>
                         </li>
                     </ul>
                 </div>

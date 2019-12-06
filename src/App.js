@@ -15,10 +15,9 @@ class App extends React.Component {
       // console.log(this.props.data)
       return <div></div>
     }
-    console.log((new Date(this.props.data.list[0].dt_txt).toString().substring(3,0)))
     const list =this.props.data.list;
     const mylist =[list[0],list[8],list[16],list[24],list[32]];
-
+    console.log(this.props.data)
     return (
       <div>
         <NavBar />

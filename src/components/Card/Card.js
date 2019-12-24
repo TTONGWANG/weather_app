@@ -1,7 +1,7 @@
 import React from "react";
 import CardUp from '../CardUp/CardUp'
 import CardUpleft from '../CardUp/CardUpleft/CardUpleft'
-import CardDownright from '../CardDownright/CardDownright'
+import CardDownright from '../CardDown/CardDownright'
 import './Card.scss'
 
 class Card extends React.Component {

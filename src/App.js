@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './components/Card/Card'
-import NavBar from './components/NavBar/NavBar'
+// import NavBar from './components/NavBar/NavBar'
 import { connect } from 'react-redux';
 import LoadData from './redux/Action'
 import SearchBar from './components/SearchBar/SearchBar'
@@ -19,8 +19,8 @@ class App extends React.Component {
     const mylist =[list[0],list[8],list[16],list[24],list[32]];
     console.log(this.props.data)
     return (
-      <div>
-        <NavBar />
+      <div className = "constructor">
+        {/* <NavBar /> */}
         <SearchBar loadData = {this.props.LoadData}/>
         <Card city = {this.props.data.city.name} data = {mylist}/>
       </div>

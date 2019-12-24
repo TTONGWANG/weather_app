@@ -30,3 +30,28 @@
       }
     }
   }  
+
+@media screen and (max-width: 1100px){
+  .cardup {
+    h2{
+      margin-left: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .cardup {
+    h2{
+      margin-left: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .cardup {
+    h2{
+      margin-left: 0px;
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import './CardDownright.scss'
+import './CardDown.scss'
 import { Data } from "../../redux/Reducer";
 
 class CardDownright extends React.Component {

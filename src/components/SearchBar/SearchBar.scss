@@ -1,26 +1,57 @@
 @import '../config.scss';
-
-form{
-    // position: fixed;
-    padding:10px;
-    margin-left:20%;
-    // display: flex;
-    
-    button{
-        border:none;
-        background-color:$button-background-color;
-        box-shadow: 1px 1px 5px $box-shadow;
-        color: $button-color;
-        border-radius: 0px 15px 15px 0px;
-        outline:none;   
-        /* display: flex; */
-    }
-
+.autotext{
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    left:0;
+    right:0;
+    top:2rem;
+    margin:auto;
+    margin-bottom: 2rem;
     input{
-        border:none;
-        box-shadow: 1px 1px 5px $box-shadow;
-        border-radius: 15px 0px 0px 15px;
-        padding-left:5px;
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        color: rgba(0,0,0,0.73);
+        padding: 10px 5px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    ul{
+        width:340px;
+        position: absolute;
+        z-index: 2;
+        list-style-type: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-top: 1px solid grey;
+        &::before{
+            content: "";
+        }
+        background-color: white;
+    }
+    li{
+        padding: 10px 5px;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+            background-color: rgba(128, 128, 128, 0.20);
+        }
+    }
+    button{ 
+        position: absolute;
+        height: 40px;
+        width:40px;
+        outline: none;
+        border: none;
+        color: $border-color;
+        @include transition-ease;
+        &:hover{
+            text-decoration: underline;
+            color: #a1d91e;
+        }       
     }
 }
 

@@ -15,6 +15,10 @@
       width:110px;
       text-align: center;
       color:$word-color;
+      @include transition-ease;
+      &:hover{
+        transform: rotate(360deg);
+      }
 
       &:before{
         content: '';

@@ -5,6 +5,8 @@ import Card from './components/Card/Card'
 import { connect } from 'react-redux';
 import LoadData from './redux/Action'
 import SearchBar from './components/SearchBar/SearchBar'
+import Countries from './components/cities/Cities'
+import BackgroundAnimation from './components/BackgroundAnimation/BackgroundAnimation'
 class App extends React.Component {
   componentDidMount() {
     this.props.LoadData("Sydney");
@@ -19,10 +21,10 @@ class App extends React.Component {
     const mylist =[list[0],list[8],list[16],list[24],list[32]];
     console.log(this.props.data)
     return (
-      <div className = "constructor">
-        {/* <NavBar /> */}
-        <SearchBar loadData = {this.props.LoadData}/>
+      <div className = "construction">
+        <SearchBar loadData = {this.props.LoadData} items = {Countries}/>
         <Card city = {this.props.data.city.name} data = {mylist}/>
+        <BackgroundAnimation/>
       </div>
     )
   }

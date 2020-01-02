@@ -3,7 +3,7 @@ import './CardUp.scss'
 import Paris from './image/Paris.jpeg'
 import Sydney from './image/Sydney.jpeg'
 import Beijing from './image/Beijing.jpeg'
-import Melbourne from './image/Melbourne.jpeg'
+import Melbourne from './image/Melbourne2.jpeg'
 import London from './image/London.jpeg'
 import fault from './image/fault.svg'
 

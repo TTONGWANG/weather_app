@@ -1,6 +1,5 @@
 $word-color:whitesmoke;
 $border-color:#979797;
-$celsius-color: #fff;
 $background:#f8f9fa;
 $nav-background-color:#f6bfa3;
 $button-background-color:#7bc572;
@@ -11,4 +10,7 @@ $box-shadow:#888888;
     display: flex;
     flex-wrap: wrap;
 }
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
 

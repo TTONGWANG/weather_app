@@ -24,14 +24,14 @@ class SearchBar extends React.Component {
          const {items} = this.props
         let suggestions = [];
         if(event.target.value.length > 0){
-            const regex = new RegExp(`^${event.target.value }`, 'i');
-            suggestions = items.sort().filter(v=>regex.test(v))
+            const regex = new RegExp(`^${event.target.value }`, 'i');  //^match the brginning of the match,'i' ignore case
+            suggestions = items.sort().filter(v=>regex.test(v))  //Tests for a match in its string parameter.
         }
         this.setState({ city: event.target.value});
-        this.setState(()=>({suggestions}))
+        this.setState({suggestions})
     }
 
-    renderSuggestions(){
+    renderSuggestions=()=>{
         const { suggestions} = this.state;
         if(suggestions.length === 0){
             return null;
@@ -61,7 +61,7 @@ class SearchBar extends React.Component {
         return (
                 <div className = "autotext">
                     {/* <label> */}
-                    <input type="text" value={this.state.city} onChange={this.handleChange} placeholder="City name" />
+                    <input type="text" value={this.state.city} onChange={this.handleChange} onKeyDown = {this.renderSuggestions} placeholder="City name" />
                     {/* </label> */}
                     {this.renderSuggestions()}
                     <button onClick={this.handleSubmit} ><FontAwesomeIcon icon={faSearch} /> </button>

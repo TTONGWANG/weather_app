@@ -2,23 +2,22 @@
     position: absolute;
     top: 0;
     left:0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
     li{
         position: absolute;
         // display: block;
         list-style: none;
-        // width: 25px;
-        // height: 25px;
         background: rgba(255,255,255, 0.2);
-        animation: animate 10s linear infinite;
-        bottom: -150px;
+        animation: animate linear infinite; //linear：same speed from start to end, infinite: show times is infinite
+        top: -150px;
         &:nth-child(1){
             left: 86%;
             width: 80px;
             height: 80px;
             animation-delay: 2s;
+            animation-duration: 8s;
         }
         &:nth-child(2){
             left: 12%;
@@ -32,6 +31,7 @@
             width: 100px;
             height: 100px;
             animation-delay: 5.5s;
+            animation-duration: 10s;
         }
         &:nth-child(4){
             left: 42%;
@@ -51,18 +51,22 @@
             left: 15%;
             width: 110px;
             height: 110px;
-            // animation-delay: 2s;
             animation-duration: 15s;
         }
     }
     @keyframes animate{
-        0%{
+        from{
             transform: translateY(0) rotate(0deg);
             opacity: 1;
         }
-        100%{
-            transform: translateY(-1000px) rotate(360deg);
+        to{
+            transform: translateY(1000px) rotate(360deg);
             opacity: 0;
         }
     }
 }
+
+//从上到下：top:-150px; translateY(0)-translateY(1000px)
+//从下到上：bottom: -150px: translateY(0)-translateY(-1000px)
+//从左到右：left: -150px; translateX(0)-translateX(1000px)
+//从右到左：right: -150; translateX(0)-translateX(-1000px)

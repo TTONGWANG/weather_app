@@ -11,24 +11,37 @@ class SearchBar extends React.Component {
             city: '',
             city_change: '',
             api : '',
+            ul_display:true,
             suggestions:[]
         };
 
     }
-    componentDidMount(){
-        this.props.loadData(this.state.city);
-    }
- 
+    // componentDidMount(){
+    //     this.props.loadData(this.state.city);
+    // }
+
     handleChange = (event) => {
-         console.log(event.target.value);
-         const {items} = this.props
+        const {items} = this.props
         let suggestions = [];
         if(event.target.value.length > 0){
-            const regex = new RegExp(`^${event.target.value }`, 'i');  //^match the brginning of the match,'i' ignore case
-            suggestions = items.sort().filter(v=>regex.test(v))  //Tests for a match in its string parameter.
+            const regex = new RegExp(`^${event.target.value }`, 'i');  //^match the beginning of the match,'i' ignore case
+            console.log(regex)
+            suggestions = items.sort().filter(v=>regex.test(v))  //Tests for a match in its string parameter. 给定字符串是否符合，符合的组成数组
+            console.log(suggestions)
         }
-        this.setState({ city: event.target.value});
-        this.setState({suggestions})
+        this.setState({ 
+            city: event.target.value,
+            suggestions,
+            ul_display: true
+        });
+    }
+
+    getListValue = (event) =>{
+        // console.log(event.target.innerText)
+        this.setState({
+            city:event.target.innerText,
+            ul_display: false
+        })
     }
 
     renderSuggestions=()=>{
@@ -37,10 +50,9 @@ class SearchBar extends React.Component {
             return null;
         }
         return(
-            <ul>
-                {suggestions.map((item) => <li>{item}</li>)}
+            <ul className = {this.state.ul_display?'show':'disappear'}>
+                {suggestions.map((item) => <li onClick = {this.getListValue}>{item}</li>)}
             </ul>)
-        
     }
 
     handleSubmit = (event) => {
@@ -49,10 +61,11 @@ class SearchBar extends React.Component {
         // this.props.loadData(this.state.city);
         this.setState({
             city_change: this.state.city,
+            
         })
         event.preventDefault();
         this.props.loadData(this.state.city);
-        // console.log(this.state.city)
+        console.log(this.state.city)
     
     }
     
@@ -60,9 +73,7 @@ class SearchBar extends React.Component {
         
         return (
                 <div className = "autotext">
-                    {/* <label> */}
-                    <input type="text" value={this.state.city} onChange={this.handleChange} onKeyDown = {this.renderSuggestions} placeholder="City name" />
-                    {/* </label> */}
+                    <input type="text" value={this.state.city} onChange={this.handleChange} placeholder="City name" />
                     {this.renderSuggestions()}
                     <button onClick={this.handleSubmit} ><FontAwesomeIcon icon={faSearch} /> </button>
                 </div>

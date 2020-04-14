@@ -5,7 +5,7 @@ const LoadData = (city) => {
     // console.log(city)
     return async dispatch => {   
         let data = await BackendAPI.fetchWeather(city);
-        await dispatch({
+        dispatch({
             type: LODA_DATA,
             data:data
         })

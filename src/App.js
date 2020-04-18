@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     if (this.props.data.length === 0) {
       return <div>
         loading...

@@ -17,7 +17,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 5px solid whitesmoke;
   position: absolute;
   top: 2rem;
   left: 29rem;
@@ -59,5 +59,38 @@
 .cardupleft__detial {
   font-size: 20px;
   margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .cardupleft h1 {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cardupleft h1 {
+    font-size: 100px;
+    margin-right: 70px;
+  }
+  .cardupleft__celsius {
+    /* background-color: #fff; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+    position: absolute;
+    top: 2rem;
+    left: 29rem;
+    margin-left: -30px;
+  }
+  .cardupleft > p {
+    font-size: 27px;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: -70px;
+  }
+  .cardupleft ul {
+    margin-left: -35px;
+  }
 }
 /*# sourceMappingURL=CardUpleft.css.map */

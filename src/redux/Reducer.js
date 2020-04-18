@@ -16,6 +16,7 @@ export const Data = (state = initialState, action)=>{
         default:
             return [];
     }
+
 }
 
 export default combineReducers({Data});

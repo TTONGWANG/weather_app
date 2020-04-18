@@ -9,25 +9,19 @@ class SearchBar extends React.Component {
         this.state = {
             isLoading: false,
             city: '',
-            city_change: '',
-            api : '',
             ul_display:true,
             suggestions:[]
         };
 
     }
-    // componentDidMount(){
-    //     this.props.loadData(this.state.city);
-    // }
-
     handleChange = (event) => {
         const {items} = this.props
         let suggestions = [];
         if(event.target.value.length > 0){
             const regex = new RegExp(`^${event.target.value }`, 'i');  //^match the beginning of the match,'i' ignore case
-            console.log(regex)
+            // console.log(regex)
             suggestions = items.sort().filter(v=>regex.test(v))  //Tests for a match in its string parameter. 给定字符串是否符合，符合的组成数组
-            console.log(suggestions)
+            // console.log(suggestions)
         }
         this.setState({ 
             city: event.target.value,
@@ -60,12 +54,12 @@ class SearchBar extends React.Component {
         // this.fetchWeather(this.state.city);
         // this.props.loadData(this.state.city);
         this.setState({
-            city_change: this.state.city,
+            city: this.state.city,
             
         })
         event.preventDefault();
         this.props.loadData(this.state.city);
-        console.log(this.state.city)
+        // console.log(this.state.city)
     
     }
     

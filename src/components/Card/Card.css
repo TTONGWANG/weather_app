@@ -1,5 +1,12 @@
 .Card {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 2rem;
   margin: auto;
+  margin-top: 50px;
+  margin-left: auto;
   width: 1100px;
   height: 700px;
   display: -webkit-box;
@@ -7,5 +14,23 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+  .Card {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Card {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Card {
+    width: 384px;
+  }
 }
 /*# sourceMappingURL=Card.css.map */

@@ -1,5 +1,5 @@
 .carddownright {
-  background-color: #f8f9fa;
+  background-color: #e5ecda;
   width: 1100px;
   height: 350px;
   border-radius: 0 0 16px 16px;
@@ -43,4 +43,45 @@
   margin-bottom: 30px;
   color: #979797;
 }
-/*# sourceMappingURL=CardDownright.css.map */
+
+@media screen and (max-width: 1100px) {
+  .carddownright li {
+    /* border: 1px solid black; */
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .carddownright li {
+    /* border: 1px solid black; */
+    width: 80px;
+  }
+  .carddownright h1 {
+    font-size: 1.7rem;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+  .carddownright p {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carddownright li {
+    /* border: 1px solid black; */
+    width: 60px;
+  }
+  .carddownright h1 {
+    font-size: 2rem;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+  .carddownright img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .carddownright p {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=CardDown.css.map */

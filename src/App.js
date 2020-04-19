@@ -15,9 +15,7 @@ class App extends React.Component {
   render() {
     // console.log(this.props)
     if (this.props.data.length === 0) {
-      return <div>
-        loading...
-      </div>
+      return <div>loading...</div>
     }
     const list =this.props.data.list;
     const mylist =[list[0],list[8],list[16],list[24],list[32]];
